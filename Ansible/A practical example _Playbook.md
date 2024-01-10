@@ -2,35 +2,7 @@
 # A practical example of an Ansible Playbook
 Ansible is capable of communicating with many different device classifications, from cloud-based REST APIs, to Linux and Windows systems, networking hardware, and much more. This is a sample of 2 Ansible modules automatically updating 2 types of servers:
 
-
-name: Update web servers
-  hosts: webservers
-  become: true
- 
-  tasks:
-    name: Ensure apache is at the latest version
-      ansible.builtin.yum:
-        name: httpd
-        state: latest
-    name: Write the apache config file
-      ansible.builtin.template:
-        src: /srv/httpd.j2
-        dest: /etc/httpd.conf
-        mode: "0644"
- 
- name: Update db servers
-  hosts: databases
-  become: true
- 
-  tasks:
-     name: Ensure postgresql is at the latest version
-      ansible.builtin.yum:
-        name: postgresql
-        state: latest
-     name: Ensure that postgresql is started
-      ansible.builtin.service:
-        name: postgresql
-        state: started
+![ansible-example](https://github.com/aa-cloudengineer/IaC/assets/144057103/7a0b1227-6c70-4630-8c9e-c1bf21e33040)
 
 ## The playbook contains 2 plays: 
 
