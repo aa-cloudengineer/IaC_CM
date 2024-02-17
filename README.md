@@ -20,7 +20,7 @@ Most common IaC Tools:
 - Azure ARM
   A service provided by Microsoft Azure that enables teams to manage infrastructure resources using JSON templates.
 
-# CM
+# Configuration Management (CM)
 Configuration Management (CM) Tools, on the other hand, are used to automate the configuration and management of software applications running on the infrastructure. They help teams to maintain consistency across different environments by automating the configuration of software components and ensuring that configurations are applied consistently across all instances of an application.
 
 Configuration Management (CM) maintains the consistency of an application’s performance, as well as its functional and physical inputs along with requirements, overall design, and operations throughout the lifespan of the product.
