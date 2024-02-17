@@ -111,16 +111,16 @@ Playbook Structure(pics)
 
 Let us now go through the different YAML tags. The different tags are described below −
 
-name
+-name:
 This tag specifies the name of the Ansible playbook. As in what this playbook will be doing. Any logical name can be given to the playbook.
 
-hosts
+-hosts:
 This tag specifies the lists of hosts or host group against which we want to run the task. The hosts field/tag is mandatory. It tells Ansible on which hosts to run the listed tasks. The tasks can be run on the same machine or on a remote machine. One can run the tasks on multiple machines and hence hosts tag can have a group of hosts’ entry as well.
 
-vars
+-vars:
 Vars tag lets you define the variables which you can use in your playbook. Usage is similar to variables in any programming language.
 
-tasks
+-tasks:
 All playbooks should contain tasks or a list of tasks to be executed. Tasks are a list of actions one needs to perform. A tasks field contains the name of the task. This works as the help text for the user. It is not mandatory but proves useful in debugging the playbook. Each task internally links to a piece of code called a module. A module that should be executed, and arguments that are required for the module you want to execute.
 
 ##  Terms used in Ansible
@@ -130,9 +130,9 @@ Terms			Explanation
 - Modules: The module is a command or set of similar commands which is executed on the client-side.
 - Task:           	A task is a section which consists of a single procedure to be completed.
 - Role:           	It is a way of organizing tasks and related files to be later called in a playbook.
-Fact:           	The information fetched from the client system from the global variables with the gather facts operation.
-Inventory:      	A file containing the data regarding the Ansible client-server.
-Play:           	It is the execution of the playbook.
-Handler:        	The task is called only if a notifier is present.
-Notifier:       	The section attributed to a task which calls a handler if the output is changed.
-Tag:            	It is a name set to a task that can be used later on to issue just that specific task or group of jobs.
+- Fact:           	The information fetched from the client system from the global variables with the gather facts operation.
+- Inventory:      	A file containing the data regarding the Ansible client-server.
+- Play:           	It is the execution of the playbook.
+- Handler:        	The task is called only if a notifier is present.
+- Notifier:       	The section attributed to a task which calls a handler if the output is changed.
+- Tag:            	It is a name set to a task that can be used later on to issue just that specific task or group of jobs.
