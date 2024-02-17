@@ -3,7 +3,7 @@ Infrastructure as Code (IaC) is the managing and provisioning of infrastructure 
 In this repo the following IaC tools will be explored with sample project: 
 
 - [Ansible](https://github.com/aa-cloudengineer/IaC/tree/main/Ansible)
-- [Terraform]https://github.com/aa-cloudengineer/IaC/tree/main/Terraform)
+- [Terraform](https://github.com/aa-cloudengineer/IaC/tree/main/Terraform)
 - Cloudformation
 - Google CMD
 - Azure ARM
