@@ -126,10 +126,10 @@ All playbooks should contain tasks or a list of tasks to be executed. Tasks are 
 ##  Terms used in Ansible
 Terms			Explanation
 -------------------------------------------------------------------------------------------------------------------
-Ansible Server: 	It is a machine where Ansible is installed and from which all tasks and playbooks will be executed.
-Modules:		    The module is a command or set of similar commands which is executed on the client-side.
-Task:           	A task is a section which consists of a single procedure to be completed.
-Role:           	It is a way of organizing tasks and related files to be later called in a playbook.
+- Ansible Server: 	It is a machine where Ansible is installed and from which all tasks and playbooks will be executed.
+- Modules: The module is a command or set of similar commands which is executed on the client-side.
+- Task:           	A task is a section which consists of a single procedure to be completed.
+- Role:           	It is a way of organizing tasks and related files to be later called in a playbook.
 Fact:           	The information fetched from the client system from the global variables with the gather facts operation.
 Inventory:      	A file containing the data regarding the Ansible client-server.
 Play:           	It is the execution of the playbook.
