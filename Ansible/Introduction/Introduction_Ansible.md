@@ -79,7 +79,7 @@ specify multiple hosts by separating them with colons:
 ansible server1:server2 -m ping -u root
 
 # Ansible architecture
-
+(https://github.com/aa-cloudengineer/IaC_CM/blob/main/Ansible/Introduction/ansible-arch.png)
 
 ## Modules
 Ansible works by connecting to nodes (or hosts) and pushing out small programs called modules to these nodes. Nodes are the target endpoints—servers, network devices, or any computer—that you aim to manage with Ansible. Modules are used to accomplish automation tasks in Ansible. These programs are written to be resource models of the desired state of the system. Ansible then executes these modules and removes them when finished.
