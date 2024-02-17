@@ -3,21 +3,21 @@ Infrastructure as Code (IaC) refers to the process of defining and managing infr
 
 IaC manages infrastructure using a descriptive model. Infrastructure includes networks, virtual machines, load balancers, to name a few. An IaC model produces the same environment every time it is applied.
 
-Most common IaC Tools:
+Most common IaC Tools with practical examples:
 
-- [Terraform](https://github.com/aa-cloudengineer/IaC/tree/main/Terraform)
+- [Terraform](https://github.com/aa-cloudengineer/IaC/tree/main/Terraform):
   A popular IaC tool that enables teams to manage infrastructure resources such as servers, networks, and storage in a declarative way 
   using a simple language called HashiCorp Configuration Language (HCL).
   
-- [Cloudformation](https://github.com/aa-cloudengineer/IaC/tree/main/Cloudformation)
+- [Cloudformation](https://github.com/aa-cloudengineer/IaC/tree/main/Cloudformation):
  A service provided by Amazon Web Services (AWS) that enables teams to define and manage infrastructure resources as code using templates. 
  CloudFormation supports several AWS services and enables teams to create and manage complex architectures.
 
-- Google CDM
+- Google CDM:
   A service provided by Google Cloud Platform (GCP) that enables teams to define and manage GCP resources as code using YAML or JSON     
   templates.
   
-- Azure ARM
+- Azure ARM:
   A service provided by Microsoft Azure that enables teams to manage infrastructure resources using JSON templates.
 
 # Configuration Management (CM)
@@ -25,20 +25,20 @@ Configuration Management (CM) Tools, on the other hand, are used to automate the
 
 Configuration Management (CM) maintains the consistency of an application’s performance, as well as its functional and physical inputs along with requirements, overall design, and operations throughout the lifespan of the product.
 
-Most common Configuration Management tools:
+Most common Configuration Management tools with practical examples:
 
-- [Ansible](https://github.com/aa-cloudengineer/IaC/tree/main/Ansible)
+- [Ansible](https://github.com/aa-cloudengineer/IaC/tree/main/Ansible):
 A popular CM tool that enables teams to automate the configuration and management of software applications. Ansible uses a simple language called YAML to define configurations and supports several operating systems and cloud providers.
 
--  Chef
+-  Chef:
   A configuration management tool that automates the deployment, configuration, and management of software.
 
--  Puppet
+-  Puppet:
   A configuration management tool that helps automate the management of infrastructure, applications, and compliance.
 
-- SaltStack
+- SaltStack:
   A tool that automates the configuration and management of software applications, operating systems, and servers.
 
-  The main difference between Infrastructure as Code (IaC) and Configuration Management (CM) is that IaC focuses on managing and provisioning infrastructure through code, while CM focuses on automating the configuration and management of software applications, operating systems, and servers. IaC tools focus on infrastructure management, while CM tools focus on software configuration management.
+The main difference between Infrastructure as Code (IaC) and Configuration Management (CM) is that IaC focuses on managing and provisioning infrastructure through code, while CM focuses on automating the configuration and management of software applications, operating systems, and servers. IaC tools focus on infrastructure management, while CM tools focus on software configuration management.
 
 IaC and CM are complementary concepts that help teams automate and manage their IT infrastructure more efficiently. While IaC focuses on the infrastructure layer, CM focuses on the application layer. Some common IaC tools include Terraform, CloudFormation, Ansible, and Pulumi, while common CM tools include Chef, Puppet, SaltStack, and Ansible.
