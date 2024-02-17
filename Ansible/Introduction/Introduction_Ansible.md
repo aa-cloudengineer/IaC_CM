@@ -111,16 +111,16 @@ Playbook Structure(pics)
 
 Let us now go through the different YAML tags. The different tags are described below −
 
--name:
+- name:
 This tag specifies the name of the Ansible playbook. As in what this playbook will be doing. Any logical name can be given to the playbook.
 
--hosts:
+- hosts:
 This tag specifies the lists of hosts or host group against which we want to run the task. The hosts field/tag is mandatory. It tells Ansible on which hosts to run the listed tasks. The tasks can be run on the same machine or on a remote machine. One can run the tasks on multiple machines and hence hosts tag can have a group of hosts’ entry as well.
 
--vars:
+- vars:
 Vars tag lets you define the variables which you can use in your playbook. Usage is similar to variables in any programming language.
 
--tasks:
+- tasks:
 All playbooks should contain tasks or a list of tasks to be executed. Tasks are a list of actions one needs to perform. A tasks field contains the name of the task. This works as the help text for the user. It is not mandatory but proves useful in debugging the playbook. Each task internally links to a piece of code called a module. A module that should be executed, and arguments that are required for the module you want to execute.
 
 ##  Terms used in Ansible 
