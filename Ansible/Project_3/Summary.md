@@ -15,7 +15,7 @@
 - Step 5 - Edit the Vagrantfile and add the following lines to the end of the file to
   provision Ansible on the VM:
 
-    config.vm.provision "shell", inline: <<-SHELL
+    Config.vm.provision "shell", inline: <<-SHELL
     sudo yum install epel-release -y
     sudo yum install ansible -y
     SHELL
