@@ -13,7 +13,7 @@
 - Step 4 - Navigate to the directory and create a new file called Vagrantfile by
   running the command vagrant init centos/7
 - Step 5 - Edit the Vagrantfile and add the following lines to the end of the file to
-  provision Ansible on the VM:
+  provision Ansible on the VM
   
     Vagrant.configure("2") do |config|
     config.vm.define "ansible-controller" do |controller|
