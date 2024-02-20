@@ -84,3 +84,4 @@ name> e.g vagrant ssh web
 
 This completes the process of setting up host machines
   
+https://drive.google.com/file/d/1UHOMwQuvnIbCeSrEDeV6CO6S2ofa5Cs9/view
