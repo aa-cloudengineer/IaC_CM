@@ -14,17 +14,19 @@
   running the command vagrant init centos/7
 - Step 5 - Edit the Vagrantfile and add the following lines to the end of the file to
   provision Ansible on the VM
-  
-Vagrant.configure("2") do |config|
-config.vm.define "ansible-controller" do |controller|
-controller.vm.hostname = "controller"
-end
-config.vm.box = "centos/7"
-config.vm.provision "shell", inline: <<-SHELL
-sudo yum install epel-release -y
-sudo yum install ansible -y
-SHELL
-end
+
+ Vagrantfile for creating VM for Ansible Controller
+ 
+    Vagrant.configure("2") do |config|
+    config.vm.define "ansible-controller" do |controller|
+    controller.vm.hostname = "controller"
+    end
+    config.vm.box = "centos/7"
+    config.vm.provision "shell", inline: <<-SHELL
+    sudo yum install epel-release -y
+    sudo yum install ansible -y
+    SHELL
+    end
 
  Vagrantfile for creating VM for Ansible Controller
 
