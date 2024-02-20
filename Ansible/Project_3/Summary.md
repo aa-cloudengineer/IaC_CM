@@ -4,4 +4,47 @@
 - In this Demo we going to use Vagrant to create Linux Virtual Machines
 - steps will remain same for both methods (locally (Vagrant) or clould platform)
 
+ ## Part A - Ansible Controller Machine Setup
+- Step 1 - Install VirtualBox and Vagrant on your local machine.
+- Step 2 - Open a terminal and navigate to the directory where you want to set up
+  your Ansible project.
+- Step 3 - Create a new directory for your Ansible controller VM by running the
+  command mkdir ansible-controller
+- Step 4 - Navigate to the directory and create a new file called Vagrantfile by
+  running the command vagrant init centos/7
+- Step 5 - Edit the Vagrantfile and add the following lines to the end of the file to
+  provision Ansible on the VM:
+
+    config.vm.provision "shell", inline: <<-SHELL
+    sudo yum install epel-release -y
+    sudo yum install ansible -y
+    SHELL
+
+ Vagrantfile for creating VM for Ansible Controller
+
+    Vagrant.configure("2") do |config|
+    config.vm.define "ansible-controller" do |controller|
+    controller.vm.hostname = "controller"
+    end
+    config.vm.box = "centos/7"
+    config.vm.provision "shell", inline: <<-SHELL
+    sudo yum install epel-release -y
+    sudo yum install ansible -y
+    SHELL
+    end
+- Step 6 - Save & check its a valid vagrantfile vagrant validate Then run
+  command vagrant up to start the VM
+- Step 7 - Once the VM is up and running, connect to it using SSH by running the
+  command vagrant ssh
+  Check ansible is installed - ansible --version
+- Step 8 - Create a new directory for your Ansible project on the controller VM by
+  running the command mkdir ansible-project
+- Step 9 - Navigate to the ansible-project directory and create a new file called
+  hosts by running the command touch hosts
+- Step 10 - Create a new file called playbook.yml. This file will contain the tasks
+  you want to perform on your managed hosts
+  As of now the hosts and the playbook file are empty
+  We will now create some host machines that will be controlled by the Ansible
+  controller
+    
   
