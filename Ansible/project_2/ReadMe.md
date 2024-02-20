@@ -1,4 +1,4 @@
-
+https://github.com/devopsjourney1/devops-project2021/tree/master/solution/1.LabSetup
 # Install Ansible on control station
 ```
 sudo apt-get install ansible -y
