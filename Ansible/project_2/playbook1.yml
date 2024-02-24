@@ -1,4 +1,4 @@
-- hosts: Target-Servers]
+- hosts: Target-Servers
 become: yes
   tasks:
   - name: ensure docker is installed
