@@ -1,7 +1,7 @@
-[control]
+[Control-Server]
 control
 
-[nodes] 
-node1
-node2
-node3
+[Target-Servers] 
+VM1
+VM2
+VM3
