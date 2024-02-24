@@ -1,5 +1,5 @@
-- hosts: nodes
-  become: yes
+- hosts: Target-Servers]
+become: yes
   tasks:
   - name: ensure docker is installed
     apt:
