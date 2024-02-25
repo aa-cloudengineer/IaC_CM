@@ -7,7 +7,7 @@ https://www.vagrantup.com/docs/installation
 https://www.vagrantup.com/docs/providers/virtualbox
 
 # Step: 3
-- Create Vagrantfile which will provision the desired environment (control vs and 3 target vms)
+- Create Vagrantfile which will provision the desired environment (controller VM and 3 target VMs)
 - Create myhosts file for the inventory
 - Create playbook1.yml to configure the target servers
 
