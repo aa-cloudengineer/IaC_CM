@@ -17,7 +17,7 @@ vagrant up
 vagrant ssh control
 ```
 
-#### Copy over hosts file
+### Copy over hosts file
 ```
 sudo cp /vagrant/myhosts /etc/myhosts
 ```
