@@ -1,9 +1,9 @@
 # Step: 1 
-## Install Vagrant
+### Install Vagrant
 https://www.vagrantup.com/docs/installation
 
 # Step: 2 
-## Install Oracle Virtualbox
+### Install Oracle Virtualbox
 https://www.vagrantup.com/docs/providers/virtualbox
 
 # Step: 3
@@ -22,12 +22,12 @@ vagrant ssh control
 sudo cp /vagrant/myhosts /etc/myhosts
 ```
 
-## Install Ansible on control station
+### Install Ansible on control station
 ```
 sudo apt-get install ansible -y
 ```
 
-## Make hosts SSH accessible
+### Make hosts SSH accessible
 ```
 ssh-keygen
 ssh-copy-id vm1 && ssh-copy-id vm2 && ssh-copy-id vm3
@@ -42,7 +42,6 @@ ansible nodes -i myhosts -m command -a hostname
 ```
 ansible nodes -i myhosts -m command -a 'sudo apt-get -y install python-simplejson'
 ```
-https://github.com/devopsjourney1/devops-project2021/tree/master/solution/1.LabSetup
 ### Run the playbook to install docker
 ```
 ansible-playbook -i myhosts -K playbook1.yml
