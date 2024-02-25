@@ -35,12 +35,12 @@ ssh-copy-id vm1 && ssh-copy-id vm2 && ssh-copy-id vm3
 
 ### Test ansible
 ```
-ansible nodes -i myhosts -m command -a hostname
+ansible Target-Servers -i myhosts -m command -a hostname
 ```
 
 ### Install Python 
 ```
-ansible nodes -i myhosts -m command -a 'sudo apt-get -y install python-simplejson'
+ansible Target-Servers -i myhosts -m command -a 'sudo apt-get -y install python-simplejson'
 ```
 ### Run the playbook to install docker
 ```
