@@ -127,23 +127,8 @@ ssh vagrant@192.168.33.11
   to the host machines
 - Step 4 - Now edit the playbook.yml file and add instructions for host machines
   For e.g. to install the Apache web server on your webservers, you can use the
-  following playbook
-  
----
- - name: Install Apache web server
- hosts: dbservers
- become: true
- tasks:
- - name: Install Apache
- yum:
- name: httpd
- state: latest
- - name: Start Apache
- service:
- name: httpd
- state: started
- enabled: true
-  
+  following playbook:
+    
 Ansible Playbook to install and start Apache web server
 
                     ---
@@ -168,10 +153,12 @@ opening a web browser and navigating to the IP addresses of your webservers
 
 —————————————————————————————
 
-Part E - Adding Ansible within Vagrantfile as Provisioner
+## Part E - Adding Ansible within Vagrantfile as Provisioner
+
 If we install Ansible and Vagrant on the same machine, we can use Ansible as a
 Provisioner in Vagrantfile
-config.vm.provision "ansible" do |ansible|
-ansible.playbook = "playbook.yml"
+
+             config.vm.provision "ansible" do |ansible|
+             ansible.playbook = "playbook.yml"
   
 https://drive.google.com/file/d/1UHOMwQuvnIbCeSrEDeV6CO6S2ofa5Cs9/view
