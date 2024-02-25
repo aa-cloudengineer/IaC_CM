@@ -128,9 +128,10 @@ ssh vagrant@192.168.33.11
 - Step 4 - Now edit the playbook.yml file and add instructions for host machines
   For e.g. to install the Apache web server on your webservers, you can use the
   following playbook
-
+  
 Ansible Playbook to install and start Apache web server
----
+
+    ---
 - name: Install Apache web server
 hosts: dbservers
 become: true
@@ -145,7 +146,7 @@ service:
 name: httpd
 state: started
 enabled: true
-
+    
 Step 5 - You can now run the playbook on the managed hosts by running the
 command ansible-playbook -i hosts playbook.yml
 Step 6 - Once the playbook has run, you can access the web servers by
