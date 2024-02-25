@@ -131,21 +131,20 @@ ssh vagrant@192.168.33.11
   
 Ansible Playbook to install and start Apache web server
 
-    ---
-- name: Install Apache web server
-hosts: dbservers
-become: true
-
-tasks:
-- name: Install Apache
-yum:
-name: httpd
-state: latest
-- name: Start Apache
-service:
-name: httpd
-state: started
-enabled: true
+ ---
+ - name: Install Apache web server
+ hosts: dbservers
+ become: true
+ tasks:
+ - name: Install Apache
+ yum:
+ name: httpd
+ state: latest
+ - name: Start Apache
+ service:
+ name: httpd
+ state: started
+ enabled: true
     
 Step 5 - You can now run the playbook on the managed hosts by running the
 command ansible-playbook -i hosts playbook.yml
