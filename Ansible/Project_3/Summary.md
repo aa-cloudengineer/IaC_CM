@@ -129,19 +129,20 @@ ssh vagrant@192.168.33.11
   For e.g. to install the Apache web server on your webservers, you can use the
   following playbook
   
-                Vagrant.configure("2") do |config|
-                config.vm.box = "centos/7"
-                config.vm.define "web" do |web|
-                web.vm.hostname = "web"
-                web.vm.network "private_network", ip: "192.168.33.10"
-                end
-                config.vm.define "db" do |db|
-                db.vm.hostname = "db"
-                db.vm.network "private_network", ip: "192.168.33.11"
-                end
-                config.vm.network "forwarded_port", guest: 80, host: 8080,         auto_correct: true
-                config.vm.usable_port_range = (8000..9000)
-                end
+---
+ - name: Install Apache web server
+ hosts: dbservers
+ become: true
+ tasks:
+ - name: Install Apache
+ yum:
+ name: httpd
+ state: latest
+ - name: Start Apache
+ service:
+ name: httpd
+ state: started
+ enabled: true
   
 Ansible Playbook to install and start Apache web server
 
