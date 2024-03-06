@@ -13,8 +13,9 @@ Here's an example to illustrate how Terraform works:
 
 Let's say we want to provision a virtual machine (VM) on AWS. With Terraform, we would write a configuration file that defines the desired state of the VM, including its instance type, storage, networking, and other settings. 
 
-The configuration file might look something like this:
-main.tf
+The configuration file might look something like this: 
+
+
               provider "aws" {
                 access_key = "your-access-key"
                 secret_key = "your-secret-key"
@@ -31,7 +32,7 @@ main.tf
                 }
               }
     
-
+main.tf
 
 In this example, the configuration specifies that an AWS EC2 instance should be created. It specifies the instance's Amazon Machine Image (AMI), instance type, SSH key pair, and assigns a name tag.
 
