@@ -168,7 +168,7 @@ In this example, the "instance_type" variable is defined with a default value. T
 
 State: The state file is a crucial aspect of Terraform that keeps track of the actual infrastructure state compared to the desired state defined in your configuration. It stores information about the resources managed by Terraform, their properties, and dependencies. The state file allows Terraform to understand the existing resources and manage changes effectively. Here's an example command to manage Terraform state:
 
-terraform state list
+            terraform state list
 
 This command lists all the resources tracked by Terraform in the current state file.
 
