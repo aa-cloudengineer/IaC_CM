@@ -92,22 +92,22 @@ Extract the downloaded archive and add the Terraform binary to your system's PAT
 
 For example, to provision an AWS EC2 instance, your main.tf file may look like this:
 
- provider "aws" {
-   region = "us-west-2"
- }
-
- resource "aws_instance" "example" {
-   ami           = "ami-0c94855ba95c71c99"
-   instance_type = "t2.micro"
- }
+          provider "aws" {
+            region = "us-west-2"
+          }
+         
+          resource "aws_instance" "example" {
+            ami           = "ami-0c94855ba95c71c99"
+            instance_type = "t2.micro"
+          }
 
 - Initialize and Apply: Open a terminal or command prompt, navigate to your Terraform project directory, and run the following commands:
 
- terraform init
+         terraform init
 
 The init command downloads the necessary provider plugins and sets up the backend.
 
- terraform apply
+         terraform apply
 
 The apply command analyzes your Terraform configuration, creates an execution plan, and prompts for confirmation. If everything looks correct, you can confirm the changes, and Terraform will provision the resources on your chosen cloud provider.
 
@@ -126,43 +126,43 @@ Here are five crucial terminologies in Terraform explained with real-time exampl
 
 Provider: A provider is a plugin that enables Terraform to interact with a specific cloud provider or service. Providers are responsible for translating Terraform configurations into API calls to provision and manage resources. For example, the "aws" provider allows Terraform to interact with Amazon Web Services. Here's an example configuration snippet:
 
-provider "aws" {
-  region = "us-west-2"
-}
+          provider "aws" {
+            region = "us-west-2"
+          }
 
 In this example, the "aws" provider is configured to use the "us-west-2" region.
 
 Resource: A resource represents a tangible piece of infrastructure that Terraform manages. It could be a virtual machine, a database, a network interface, or any other resource offered by the cloud provider. Each resource has a resource type and a set of attributes that define its properties. Here's an example of provisioning an AWS EC2 instance:
 
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-}
+             resource "aws_instance" "example" {
+               ami           = "ami-0c55b159cbfafe1f0"
+               instance_type = "t2.micro"
+             }
 In this example, an EC2 instance resource of type "aws_instance" is created with the specified Amazon Machine Image (AMI) and instance type.
 
 Module: A module is a self-contained unit of Terraform configuration that encapsulates a set of resources and their configurations. It allows you to organize and reuse infrastructure code. Modules can be created and shared by the community or within your organization. For instance, you can create a module to provision a standard set of resources for your web application. Here's an example of using a module:
 
-module "web_app" {
-  source = "github.com/example/web-app"
-  version = "1.0.0"
-
-  region = "us-west-2"
-  instance_count = 2
-}
+            module "web_app" {
+              source = "github.com/example/web-app"
+              version = "1.0.0"
+            
+              region = "us-west-2"
+              instance_count = 2
+            }
 
 In this example, the "web_app" module is used, which is sourced from a Git repository. It provisions a web application infrastructure with two instances in the specified region.
 
 Variable: A variable allows you to parameterize your Terraform configuration. It provides flexibility and reusability by allowing you to pass values dynamically to your configuration. Variables can be defined in a separate file, through command-line flags, or using environment variables. Here's an example of defining and using a variable:
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  default     = "t2.micro"
-}
-
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = var.instance_type
-}
+               variable "instance_type" {
+                 description = "EC2 instance type"
+                 default     = "t2.micro"
+               }
+               
+               resource "aws_instance" "example" {
+                 ami           = "ami-0c55b159cbfafe1f0"
+                 instance_type = var.instance_type
+               }
 
 In this example, the "instance_type" variable is defined with a default value. The variable is then referenced in the resource configuration.
 
