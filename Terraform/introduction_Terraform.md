@@ -16,29 +16,25 @@ Let's say we want to provision a virtual machine (VM) on AWS. With Terraform, we
 The configuration file might look something like this:
 insert pic
 
-
-    config.vm.provision "shell", inline: <<-SHELL
-    sudo yum install epel-release -y
-    sudo yum install ansible -y
-    SHELL
+               main.tf
+              
+              provider "aws" {
+                access_key = "your-access-key"
+                secret_key = "your-secret-key"
+                region     = "us-west-2"
+              }
+              
+              resource "aws_instance" "example" {
+                ami           = "ami-0c55b159cbfafe1f0"
+                instance_type = "t2.micro"
+                key_name      = "your-key-pair-name"
+              
+                tags = {
+                  Name = "example-instance"
+                }
+              }
     
- main.tf
 
-provider "aws" {
-  access_key = "your-access-key"
-  secret_key = "your-secret-key"
-  region     = "us-west-2"
-}
-
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-  key_name      = "your-key-pair-name"
-
-  tags = {
-    Name = "example-instance"
-  }
-}
 
 In this example, the configuration specifies that an AWS EC2 instance should be created. It specifies the instance's Amazon Machine Image (AMI), instance type, SSH key pair, and assigns a name tag.
 
