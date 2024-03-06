@@ -16,15 +16,6 @@ Let's say we want to provision a virtual machine (VM) on AWS. With Terraform, we
 The configuration file might look something like this:
 insert pic
 
-Edit Vagrantfile with these lines below
-
-config.vm.provision "shell", inline: <<-SHELL
-sudo yum install epel-release -y
-sudo yum install ansible -y
-SHELL
-Vagrantfile for creating VM for Ansible Controller
-
-
  main.tf
 
 provider "aws" {
