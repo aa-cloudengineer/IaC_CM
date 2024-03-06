@@ -15,7 +15,7 @@ Let's say we want to provision a virtual machine (VM) on AWS. With Terraform, we
 
 The configuration file might look something like this:
 insert pic
-======================================================
+
  main.tf
 
 provider "aws" {
@@ -33,7 +33,7 @@ resource "aws_instance" "example" {
     Name = "example-instance"
   }
 }
-==================================================================
+
 In this example, the configuration specifies that an AWS EC2 instance should be created. It specifies the instance's Amazon Machine Image (AMI), instance type, SSH key pair, and assigns a name tag.
 
 Once we have written the configuration file, we can use the Terraform CLI to initialize, plan, and apply the changes. The CLI will communicate with the cloud provider's API and provision the necessary resources based on the defined configuration.
