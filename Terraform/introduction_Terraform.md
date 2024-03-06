@@ -16,6 +16,12 @@ Let's say we want to provision a virtual machine (VM) on AWS. With Terraform, we
 The configuration file might look something like this:
 insert pic
 
+
+    config.vm.provision "shell", inline: <<-SHELL
+    sudo yum install epel-release -y
+    sudo yum install ansible -y
+    SHELL
+    
  main.tf
 
 provider "aws" {
