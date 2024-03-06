@@ -21,7 +21,6 @@ sudo yum install epel-release -y
 sudo yum install ansible -y
 SHELL
 
-
  main.tf
 
 provider "aws" {
