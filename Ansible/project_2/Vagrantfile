@@ -1,7 +1,7 @@
 
-          ```
-          sudo apt-get install ansible -y
-          ```
+        
+                    sudo apt-get install ansible -y
+     
 
 Vagrant.configure("2") do |config|
                     servers=[
