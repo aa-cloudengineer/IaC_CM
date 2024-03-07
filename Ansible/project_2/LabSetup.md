@@ -1,17 +1,19 @@
-# Step: 1 
+# Step: 1 - Environment Setup
 ### Install Vagrant
 https://www.vagrantup.com/docs/installation
 
-# Step: 2 
 ### Install Oracle Virtualbox
 https://www.vagrantup.com/docs/providers/virtualbox
 
-# Step: 3
 - Create Vagrantfile which will provision the desired environment (controller VM and 3 target VMs)
 - Create myhosts file for the inventory
 - Create playbook1.yml to configure the target servers
 
-### Connect to the controler 
+# Step 2 Install Ansible on control station
+```
+sudo apt-get install ansible -y
+```
+# Step 3 - Connect to the controler 
 ```
 vagrant up
 vagrant ssh control
@@ -22,18 +24,18 @@ vagrant ssh control
 sudo cp /vagrant/myhosts /etc/myhosts
 ```
 
-### Install Ansible on control station
+### Make hosts SSH accessible
 ```
-sudo apt-get install ansible -y
+ping v1, v2 and v3
 ```
 
-### Make hosts SSH accessible
+### Make hosts SSH accessible - Password-less authontication
 ```
 ssh-keygen
 ssh-copy-id vm1 && ssh-copy-id vm2 && ssh-copy-id vm3
 ```
 
-### Test ansible
+### Test ansible 
 ```
 ansible Target-Servers -i myhosts -m command -a hostname
 ```
