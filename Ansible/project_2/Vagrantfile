@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
                 end
 
 
-```
-vagrant up
-vagrant ssh control
-```
+        ```
+        vagrant up
+        vagrant ssh control
+        ```
