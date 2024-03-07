@@ -1,19 +1,3 @@
- provider "aws" {
-            access_key = "your-access-key"
-            secret_key = "your-secret-key"
-            region     = "us-west-2"
-          }
-          
-          resource "aws_instance" "example" {
-            ami           = "ami-0c55b159cbfafe1f0"
-            instance_type = "t2.micro"
-            key_name      = "your-key-pair-name"
-          
-            tags = {
-              Name = "example-instance"
-            }
-          }
-
 
 
                     Vagrant.configure("2") do |config|
