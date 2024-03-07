@@ -1,4 +1,7 @@
 
+```
+ansible Target-Servers -i myhosts -m command -a hostname
+```
         
                     sudo apt-get install ansible -y
      
