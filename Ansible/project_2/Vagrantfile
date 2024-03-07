@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
                     end
                 end
 
-
+```
 sudo apt-get install ansible -y
 
 Vagrant.configure("2") do |config|
@@ -92,4 +92,6 @@ Vagrant.configure("2") do |config|
                         end
                     end
                 end
-     
+```
+
+
