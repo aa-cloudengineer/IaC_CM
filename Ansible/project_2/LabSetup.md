@@ -68,7 +68,7 @@ sudo cp /vagrant/myhosts /etc/myhosts
 
 ### Make hosts SSH accessible
 ```
-ping v1, v2 and v3
+ping vm1, vm2 and vm3
 ```
 
 ### Make hosts SSH accessible - Password-less authontication
